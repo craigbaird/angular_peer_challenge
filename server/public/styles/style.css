@@ -1,0 +1,28 @@
+body {
+  margin-left: 300px;
+}
+#innerDiv {
+  width: 75%;
+  background-color: #e3e6e8;
+}
+#contentDiv {
+  padding: 30px;
+  margin-left: 30px;
+  height: 900px;
+}
+h1 {
+  font-family: monospace;
+  margin-bottom: 20px;
+}
+input {
+  margin-bottom: 20px;
+}
+
+.odd {
+  background-color: #eff7f1;
+  padding: 5px;
+}
+.even {
+  background-color: #eff8f9;
+  padding: 5px;
+}

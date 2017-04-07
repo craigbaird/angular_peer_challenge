@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Peer Challenge</title>
+
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/style.css"/>
+
+    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/client.js"></script>
+
+  </head>
+  <body>
+    <div id="outerDiv">
+      <div id="innerDiv">
+        <div id="contentDiv">
+          <h1>Movie Collection</h1>
+          <div ng-controller="OneController">
+          <input ng-model="movie.name" type="text" placeholder="name">
+          <input ng-model="movie.description" type="text" placeholder="description">
+          <input ng-model="movie.director" type="text" placeholder="director">
+          <input ng-model="movie.length" type="text" placeholder="length">
+          <button ng-click="addNewMovie(movie)">Submit</button>
+          </div>
+
+          <div ng-controller="TwoController">
+            <div ng-repeat="movie in movieCollection">
+              <div class="row">
+                <div class="col-md-3" ng-class-odd="'odd'" ng-class-even="'even'" >Movie: {{movie.name}}</div>
+                <div class="col-md-3" ng-class-odd="'odd'" ng-class-even="'even'">Description: {{movie.description}}</div>
+                <div class="col-md-3" ng-class-odd="'odd'" ng-class-even="'even'">Director: {{movie.director}}</div>
+              <div class="col-md-3" ng-class-odd="'odd'" ng-class-even="'even'">Length: {{movie.length}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
